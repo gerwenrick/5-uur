@@ -8,8 +8,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.2.0/snap.svg-min.js"></script>
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" id="container">
 			<h1>Zit er een 5 in de klok?</h1>
+			<div id="five"></div>
 
 			<div id="digiClock">
 				<span id="hour"></span>:<span id="minute"></span>:<span
@@ -857,8 +858,6 @@
 					<circle fill="#BF4116" cx="243.5" cy="251" r="3.917" />
 				</g>
 			</svg>
-
-			<div id="five">...</div>
 		</div>
 
 		<script>
@@ -936,7 +935,7 @@
 			}
 
 			let checkTime = 5;
-			let bingoTxt = 'ER IS EEN 5!!!';
+			let bingoTxt = 'ER IS EEN 5!';
 			let failTxt = 'helaas :(';
 
 			function setHours(t) {
@@ -1099,18 +1098,14 @@
 				document.body.style.backgroundColor = '#47A64A';
 				document.body.style.color = 'white';
 				document.getElementById('five').innerHTML = bingoTxt;
-				document
-					.getElementsByClassName('container')
-					.classList.add('succesFive');
+				document.body.style.backgroundImage = 'url(images/confettipng.png)';
 			}
 
 			function normalTime() {
 				document.body.style.backgroundColor = '#1b1e23';
 				document.body.style.color = 'white';
 				document.getElementById('five').innerHTML = failTxt;
-				document
-					.getElementsByClassName('container')
-					.classList.remove('succesFive');
+				document.body.style.backgroundImage = '';
 			}
 
 			window.onload = update;

@@ -21,15 +21,9 @@ body {
   font-family: sans-serif;
   color: #f4eed7;
   text-align: center;
-}
-
-.succesFive {
-  width: 100%;
-  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: '/images/confetti.png';
 }
 
 svg {
