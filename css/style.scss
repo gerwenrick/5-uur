@@ -1,0 +1,33 @@
+// Options
+$black: #1b1e23;
+$white: #f4eed7;
+$green: #11d99b;
+
+html,
+body {
+	height: 100%;
+}
+body {
+	background: $black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+	color: $white;
+	text-align: center;
+}
+
+.succesFive {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-image: '/images/confetti.png';
+}
+
+svg {
+	display: block;
+	margin: auto;
+}
